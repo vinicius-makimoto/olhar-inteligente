@@ -1,0 +1,19 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+
+# Dados pessoais e biométricos gerados localmente
+cadastros.json
+rostos/
+
+# Modelos e mídia local
+*.pt
+*.task
+acesso_liberado.mp3
+acesso_negado.mp3

@@ -1,0 +1,40 @@
+*{
+    box-sizing:border-box;
+}
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f4f6f8;
+}
+.container{
+    width:90%;
+    max-width:500px;
+    margin:50px auto;
+    padding:30px;
+    background:#ffffff;
+    border-radius:10px;
+}
+h1{
+    margin-top:0;
+}
+.campo{
+    margin-bottom:20px;
+}
+.campo label{
+    display:block;
+    margin-bottom:8px;
+}
+.campo input{
+    width:100%;
+    padding:10px;
+}
+button{
+    width:100%;
+    padding:12px;
+    cursor:pointer;
+}
+.mensagem-sucesso{
+    padding:12px;
+    margin-bottom:20px;
+    background:#dff0d8;
+}

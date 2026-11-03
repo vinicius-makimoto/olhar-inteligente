@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Facial</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="container">
+        <h1>Cadastro Facial</h1>
+        <p>Preencha seus dados e selecione uma foto do rosto.</p>
+        {% if request.args.get("sucesso") %}
+            <div class="mensagem-sucesso">
+                Cadastro realizado com sucesso.
+            </div>
+        {% endif %}
+        <form action="{{ url_for('cadastrar') }}" method="POST" enctype="multipart/form-data">
+            <div class="campo">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div class="campo">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="campo">
+                <label for="matricula">Matrícula</label>
+                <input type="text" id="matricula" name="matricula" required>
+            </div>
+            <div class="campo">
+                <label for="foto">Foto do rosto</label>
+                <input type="file" id="foto" name="foto" accept=".jpg,.jpeg,.png,image/jpeg,image/png" required>
+            </div>
+            <button type="submit">Cadastrar rosto</button>
+        </form>
+    </main>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>
